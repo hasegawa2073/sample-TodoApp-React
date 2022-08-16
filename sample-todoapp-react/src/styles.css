@@ -2,6 +2,14 @@ html {
   font-size: 62.5%;
 }
 
+.todo-area {
+  min-width: 500px;
+  background-color: #c9c9c9;
+}
+.done-area {
+  background-color: #c1e2ff;
+}
+
 .button {
   font-family: 'Zen Maru Gothic', sans-serif;
   color: white;
@@ -34,7 +42,7 @@ html {
   font-size: 2.4rem;
   color: #707070;
 }
-.todoText {
+.todo-text {
   font-family: 'Zen Maru Gothic', sans-serif;
   font-size: 2rem;
   color: #707070;
