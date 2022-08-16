@@ -1,5 +1,5 @@
 {
-  "name": "sample-todoapp-react",
+  "name": "TodoApp",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
