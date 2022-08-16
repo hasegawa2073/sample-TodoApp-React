@@ -3,11 +3,24 @@ html {
 }
 
 .todo-area {
-  min-width: 500px;
+  width: 500px;
   background-color: #c9c9c9;
 }
 .done-area {
+  width: 500px;
   background-color: #c1e2ff;
+}
+
+.input-text {
+  min-width: 360px;
+  padding: 10px 16px;
+  font-family: 'Zen Maru Gothic', sans-serif;
+  color: #707070;
+  font-size: 2rem;
+  font-weight: 700;
+  border-radius: 10px;
+  border: none;
+  outline: none;
 }
 
 .button {
@@ -46,4 +59,5 @@ html {
   font-family: 'Zen Maru Gothic', sans-serif;
   font-size: 2rem;
   color: #707070;
+  font-weight: 700;
 }

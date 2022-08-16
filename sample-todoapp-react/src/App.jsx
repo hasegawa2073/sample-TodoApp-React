@@ -4,8 +4,10 @@ export const App = () => {
   return (
     <main>
       <section className="todo-area">
-        <input type="text" />
-        <button className="button large add">追加</button>
+        <div className="input-area">
+          <input className="input-text" type="text" />
+          <button className="button large add">追加</button>
+        </div>
         <h2 className="title">TODOリスト</h2>
         <ul>
           <li>
