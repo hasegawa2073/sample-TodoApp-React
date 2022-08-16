@@ -97,7 +97,7 @@ li::marker {
   main {
     display: flex;
     flex-direction: column;
-    min-height: 88vh;
+    min-height: 95vh;
     margin: 0 4px 0;
   }
   ul {
