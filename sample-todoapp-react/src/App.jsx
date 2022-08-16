@@ -3,7 +3,7 @@ import './styles.css';
 
 export const App = () => {
   const [inputText, setInputText] = useState('');
-  const [todoList, setTodoList] = useState(['図書館に行く', '5km歩く']);
+  const [todoList, setTodoList] = useState([]);
   const onChangeInputText = (e) => setInputText(e.target.value);
   const onClickAdd = () => {
     if (inputText === '') return;
