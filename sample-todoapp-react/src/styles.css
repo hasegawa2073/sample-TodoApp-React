@@ -1,0 +1,11 @@
+.button {
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+.button.large {
+  padding: 8px 24px;
+}
+.button.small {
+  padding: 6px 20px;
+}
