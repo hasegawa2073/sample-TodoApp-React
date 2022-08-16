@@ -28,3 +28,14 @@ html {
 .button.back {
   background-color: #b7b7b7;
 }
+
+.title {
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-size: 2.4rem;
+  color: #707070;
+}
+.todoText {
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-size: 2rem;
+  color: #707070;
+}
