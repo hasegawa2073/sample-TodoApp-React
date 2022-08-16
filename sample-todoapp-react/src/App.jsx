@@ -1,25 +1,43 @@
+import { useState } from 'react';
 import './styles.css';
 
 export const App = () => {
+  const [inputText, setInputText] = useState('');
+  const [todoList, setTodoList] = useState(['図書館に行く', '5km歩く']);
+  const onChangeInputText = (e) => setInputText(e.target.value);
+  const onClickAdd = () => {
+    if (inputText === '') return;
+    const newTodoList = [...todoList, inputText];
+    setTodoList(newTodoList);
+    setInputText('');
+    console.log(todoList);
+  };
+
   return (
     <main>
       <section className="todo-area">
         <div className="input-area">
-          <input className="input-text" type="text" />
-          <button className="button large add">追加</button>
+          <input
+            className="input-text"
+            type="text"
+            value={inputText}
+            onChange={onChangeInputText}
+          />
+          <button className="button large add" onClick={onClickAdd}>
+            追加
+          </button>
         </div>
         <h2 className="title">TODOリスト</h2>
         <ul>
-          <li className="list">
-            <p className="todo-text">図書館に行く</p>
-            <button className="button small done">完了</button>
-            <button className="button small delete">削除</button>
-          </li>
-          <li className="list">
-            <p className="todo-text">5km歩く</p>
-            <button className="button small done">完了</button>
-            <button className="button small delete">削除</button>
-          </li>
+          {todoList.map((todo) => {
+            return (
+              <li key={todo} className="list">
+                <p className="todo-text">{todo}</p>
+                <button className="button small done">完了</button>
+                <button className="button small delete">削除</button>
+              </li>
+            );
+          })}
         </ul>
       </section>
       <section className="done-area">
