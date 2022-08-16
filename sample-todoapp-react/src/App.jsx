@@ -24,6 +24,13 @@ export const App = () => {
     const newDoneList = [...doneList, todoList[index]];
     setDoneList(newDoneList);
   };
+  const onClickBack = (index) => {
+    const newDoneList = [...doneList];
+    newDoneList.splice(index, 1);
+    setDoneList(newDoneList);
+    const newTodoList = [...todoList, doneList[index]];
+    setTodoList(newTodoList);
+  };
 
   return (
     <main>
@@ -65,11 +72,16 @@ export const App = () => {
       <section className="done-area">
         <h2 className="title">DONE</h2>
         <ul>
-          {doneList.map((done) => {
+          {doneList.map((done, index) => {
             return (
               <li key={done} className="list">
                 <p className="todo-text">{done}</p>
-                <button className="button small back">戻す</button>
+                <button
+                  className="button small back"
+                  onClick={() => onClickBack(index)}
+                >
+                  戻す
+                </button>
               </li>
             );
           })}
