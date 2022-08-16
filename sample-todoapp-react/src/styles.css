@@ -1,4 +1,11 @@
+html {
+  font-size: 62.5%;
+}
+
 .button {
+  font-family: 'Zen Maru Gothic', sans-serif;
+  color: white;
+  font-size: 1.6rem;
   border-radius: 10px;
   border: none;
   cursor: pointer;
@@ -8,4 +15,16 @@
 }
 .button.small {
   padding: 6px 20px;
+}
+.button.add {
+  background-color: #ffb01c;
+}
+.button.done {
+  background-color: #96caf8;
+}
+.button.delete {
+  background-color: #89d92b;
+}
+.button.back {
+  background-color: #b7b7b7;
 }
