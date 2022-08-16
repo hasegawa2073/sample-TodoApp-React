@@ -4,6 +4,7 @@ import './styles.css';
 export const App = () => {
   const [inputText, setInputText] = useState('');
   const [todoList, setTodoList] = useState([]);
+  const [doneList, setDoneList] = useState(['野菜を食べる']);
   const onChangeInputText = (e) => setInputText(e.target.value);
   const onClickAdd = () => {
     if (inputText === '') return;
@@ -11,6 +12,12 @@ export const App = () => {
     setTodoList(newTodoList);
     setInputText('');
     console.log(todoList);
+  };
+  const onClickDelete = (index) => {
+    console.log(index);
+    const newTodoList = [...todoList];
+    newTodoList.splice(index, 1);
+    setTodoList(newTodoList);
   };
 
   return (
@@ -29,12 +36,17 @@ export const App = () => {
         </div>
         <h2 className="title">TODOリスト</h2>
         <ul>
-          {todoList.map((todo) => {
+          {todoList.map((todo, index) => {
             return (
               <li key={todo} className="list">
                 <p className="todo-text">{todo}</p>
                 <button className="button small done">完了</button>
-                <button className="button small delete">削除</button>
+                <button
+                  className="button small delete"
+                  onClick={() => onClickDelete(index)}
+                >
+                  削除
+                </button>
               </li>
             );
           })}
