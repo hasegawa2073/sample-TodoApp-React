@@ -4,20 +4,25 @@ import './styles.css';
 export const App = () => {
   const [inputText, setInputText] = useState('');
   const [todoList, setTodoList] = useState([]);
-  const [doneList, setDoneList] = useState(['野菜を食べる']);
+  const [doneList, setDoneList] = useState([]);
   const onChangeInputText = (e) => setInputText(e.target.value);
   const onClickAdd = () => {
     if (inputText === '') return;
     const newTodoList = [...todoList, inputText];
     setTodoList(newTodoList);
     setInputText('');
-    console.log(todoList);
   };
   const onClickDelete = (index) => {
-    console.log(index);
     const newTodoList = [...todoList];
     newTodoList.splice(index, 1);
     setTodoList(newTodoList);
+  };
+  const onClickDone = (index) => {
+    const newTodoList = [...todoList];
+    newTodoList.splice(index, 1);
+    setTodoList(newTodoList);
+    const newDoneList = [...doneList, todoList[index]];
+    setDoneList(newDoneList);
   };
 
   return (
@@ -40,7 +45,12 @@ export const App = () => {
             return (
               <li key={todo} className="list">
                 <p className="todo-text">{todo}</p>
-                <button className="button small done">完了</button>
+                <button
+                  className="button small done"
+                  onClick={() => onClickDone(index)}
+                >
+                  完了
+                </button>
                 <button
                   className="button small delete"
                   onClick={() => onClickDelete(index)}
@@ -55,10 +65,14 @@ export const App = () => {
       <section className="done-area">
         <h2 className="title">DONE</h2>
         <ul>
-          <li className="list">
-            <p className="todo-text">野菜を食べる</p>
-            <button className="button small back">戻す</button>
-          </li>
+          {doneList.map((done) => {
+            return (
+              <li key={done} className="list">
+                <p className="todo-text">{done}</p>
+                <button className="button small back">戻す</button>
+              </li>
+            );
+          })}
         </ul>
       </section>
     </main>
