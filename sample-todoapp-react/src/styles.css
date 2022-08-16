@@ -5,6 +5,7 @@ main {
   width: 500px;
 }
 ul {
+  margin: 0;
   padding-left: 52px;
 }
 li::marker {
@@ -16,13 +17,18 @@ li::marker {
   padding: 20px 0px 20px;
   background-color: #c9c9c9;
   border-radius: 10px;
+  min-height: 250px;
 }
 .done-area {
+  margin-top: 20px;
+  padding: 20px 0px 20px;
   background-color: #c1e2ff;
   border-radius: 10px;
+  min-height: 200px;
 }
 .input-area {
   text-align: center;
+  margin-bottom: 16px;
 }
 
 .input-text {
@@ -57,6 +63,7 @@ li::marker {
   background-color: #ffb01c;
 }
 .button.done {
+  margin-right: 8px;
   background-color: #96caf8;
 }
 .button.delete {
@@ -67,12 +74,18 @@ li::marker {
 }
 
 .title {
+  margin: 0;
   padding-left: 40px;
   font-family: 'Zen Maru Gothic', sans-serif;
   font-size: 2.4rem;
   color: #707070;
 }
+.list {
+  margin-top: 12px;
+}
 .todo-text {
+  display: inline-block;
+  margin: 0 16px 0 0;
   font-family: 'Zen Maru Gothic', sans-serif;
   font-size: 2rem;
   color: #707070;
