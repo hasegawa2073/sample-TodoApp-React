@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './styles.css';
+import { TodoArea } from './components/TodoArea';
 import { DoneArea } from './components/DoneArea';
 
 export const App = () => {
@@ -35,41 +36,14 @@ export const App = () => {
 
   return (
     <main>
-      <section className="todo-area">
-        <div className="input-area">
-          <input
-            className="input-text"
-            type="text"
-            value={inputText}
-            onChange={onChangeInputText}
-          />
-          <button className="button large add" onClick={onClickAdd}>
-            追加
-          </button>
-        </div>
-        <h2 className="title">TODOリスト</h2>
-        <ul>
-          {todoList.map((todo, index) => {
-            return (
-              <li key={todo} className="list">
-                <p className="todo-text">{todo}</p>
-                <button
-                  className="button small done"
-                  onClick={() => onClickDone(index)}
-                >
-                  完了
-                </button>
-                <button
-                  className="button small delete"
-                  onClick={() => onClickDelete(index)}
-                >
-                  削除
-                </button>
-              </li>
-            );
-          })}
-        </ul>
-      </section>
+      <TodoArea
+        inputText={inputText}
+        onChangeInputText={onChangeInputText}
+        onClickAdd={onClickAdd}
+        todoList={todoList}
+        onClickDone={onClickDone}
+        onClickDelete={onClickDelete}
+      />
       <DoneArea doneList={doneList} onClickBack={onClickBack} />
     </main>
   );
