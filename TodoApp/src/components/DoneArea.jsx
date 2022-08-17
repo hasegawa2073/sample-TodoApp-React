@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { ButtonBack } from './ButtonBack';
 import { Title } from './Title';
 import { Text } from './Text';
+import { ListStyle } from './ListStyle';
 
 const DoneAreaStyle = styled.section`
   margin-top: 10px;
@@ -26,13 +27,13 @@ export const DoneArea = (props) => {
       <ul>
         {doneList.map((done, index) => {
           return (
-            <li key={done} className="list">
+            <ListStyle key={done}>
               <Text text={done} />
               <ButtonBack
                 onClickBack={() => onClickBack(index)}
                 buttonText="戻す"
               />
-            </li>
+            </ListStyle>
           );
         })}
       </ul>

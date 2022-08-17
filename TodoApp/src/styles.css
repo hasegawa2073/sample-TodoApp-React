@@ -13,10 +13,6 @@ li::marker {
   font-size: 1.2rem;
 }
 
-.list {
-  margin-top: 12px;
-}
-
 @media screen and (max-width: 500px) {
   main {
     display: flex;
