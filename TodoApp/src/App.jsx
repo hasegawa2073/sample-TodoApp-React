@@ -1,7 +1,19 @@
 import { useState } from 'react';
+import styled from 'styled-components';
 import './styles.css';
 import { TodoArea } from './components/TodoArea';
 import { DoneArea } from './components/DoneArea';
+
+const TodoAppBoxStyle = styled.section`
+  max-width: 500px;
+  @media (max-width: 500px) {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-height: 98svh;
+    margin: 0 4px 0;
+  }
+`;
 
 export const App = () => {
   const [inputText, setInputText] = useState('');
@@ -35,7 +47,7 @@ export const App = () => {
   };
 
   return (
-    <main>
+    <TodoAppBoxStyle>
       <TodoArea
         inputText={inputText}
         onChangeInputText={onChangeInputText}
@@ -45,6 +57,6 @@ export const App = () => {
         onClickDelete={onClickDelete}
       />
       <DoneArea doneList={doneList} onClickBack={onClickBack} />
-    </main>
+    </TodoAppBoxStyle>
   );
 };
