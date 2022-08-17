@@ -35,15 +35,15 @@ li::marker {
   border: none;
   cursor: pointer;
 } */
-.button.large {
+/* .button.large {
   padding: 8px 24px;
-}
+} */
 /* .button.small {
   padding: 6px 20px;
 } */
-.button.add {
+/* .button.add {
   background-color: #ffb01c;
-}
+} */
 /* .button.done {
   margin-right: 8px;
   background-color: #96caf8;
@@ -86,9 +86,9 @@ li::marker {
     margin: 0;
     padding-left: 10%;
   }
-  .button {
+  /* .button {
     font-size: 1.6rem;
-  }
+  } */
   .todo-area {
     order: 2;
     flex-grow: 1;
@@ -102,15 +102,15 @@ li::marker {
     min-height: 0;
     margin: 0 0 10px;
   }
-  .button.add {
+  /* .button.add {
     font-size: 1.8rem;
     margin-top: 8px;
     padding: 16px 0;
     width: 100%;
-  }
-  .button.done {
+  } */
+  /* .button.done {
     margin-right: 2px;
-  }
+  } */
   .title {
     font-size: 2rem;
     margin: 0 auto;

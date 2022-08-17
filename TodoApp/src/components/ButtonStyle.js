@@ -7,21 +7,41 @@ const ButtonBaseStyle = styled.button`
   border-radius: 10px;
   border: none;
   cursor: pointer;
+  @media (max-width: 500px) {
+    font-size: 1.6rem;
+  }
 `;
 
 const ButtonSmallStyle = styled(ButtonBaseStyle)`
   padding: 6px 20px;
 `;
 
+const ButtonLargeStyle = styled(ButtonBaseStyle)`
+  padding: 8px 24px;
+`;
+
+const ButtonAddStyle = styled(ButtonLargeStyle)`
+  background-color: #ffb01c;
+  @media (max-width: 500px) {
+    font-size: 1.8rem;
+    margin-top: 8px;
+    padding: 16px 0;
+    width: 100%;
+  }
+`;
+
 export const ButtonDoneStyle = styled(ButtonSmallStyle)`
   margin-right: 8px;
   background-color: #96caf8;
+  @media (max-width: 500px) {
+    margin-right: 2px;
+  }
 `;
 
 export const ButtonDeleteStyle = styled(ButtonSmallStyle)`
   background-color: #89d92b;
 `;
 
-const ButtonBack = styled(ButtonSmallStyle)`
+export const ButtonBackStyle = styled(ButtonSmallStyle)`
   background-color: #b7b7b7;
 `;
