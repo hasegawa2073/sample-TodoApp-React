@@ -27,34 +27,6 @@ li::marker {
   min-height: 200px;
 }
 
-/* .button {
-  font-family: 'Zen Maru Gothic', sans-serif;
-  color: white;
-  font-size: 1.6rem;
-  border-radius: 10px;
-  border: none;
-  cursor: pointer;
-} */
-/* .button.large {
-  padding: 8px 24px;
-} */
-/* .button.small {
-  padding: 6px 20px;
-} */
-/* .button.add {
-  background-color: #ffb01c;
-} */
-/* .button.done {
-  margin-right: 8px;
-  background-color: #96caf8;
-} */
-/* .button.delete {
-  background-color: #89d92b;
-} */
-/* .button.back {
-  background-color: #b7b7b7;
-} */
-
 .title {
   margin: 0;
   padding-left: 40px;
@@ -86,9 +58,6 @@ li::marker {
     margin: 0;
     padding-left: 10%;
   }
-  /* .button {
-    font-size: 1.6rem;
-  } */
   .todo-area {
     order: 2;
     flex-grow: 1;
@@ -102,15 +71,6 @@ li::marker {
     min-height: 0;
     margin: 0 0 10px;
   }
-  /* .button.add {
-    font-size: 1.8rem;
-    margin-top: 8px;
-    padding: 16px 0;
-    width: 100%;
-  } */
-  /* .button.done {
-    margin-right: 2px;
-  } */
   .title {
     font-size: 2rem;
     margin: 0 auto;

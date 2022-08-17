@@ -20,7 +20,7 @@ const ButtonLargeStyle = styled(ButtonBaseStyle)`
   padding: 8px 24px;
 `;
 
-const ButtonAddStyle = styled(ButtonLargeStyle)`
+export const ButtonAddStyle = styled(ButtonLargeStyle)`
   background-color: #ffb01c;
   @media (max-width: 500px) {
     font-size: 1.8rem;

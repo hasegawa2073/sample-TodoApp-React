@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { ButtonAdd } from './ButtonAdd';
 
 const InputAreaBox = styled.div`
   display: flex;
@@ -39,9 +40,7 @@ export const InputArea = (props) => {
   return (
     <InputAreaBox>
       <InputText type="text" value={inputText} onChange={onChangeInputText} />
-      <button className="button large add" onClick={onClickAdd}>
-        追加
-      </button>
+      <ButtonAdd onClickAdd={onClickAdd} buttonText="追加" />
     </InputAreaBox>
   );
 };
