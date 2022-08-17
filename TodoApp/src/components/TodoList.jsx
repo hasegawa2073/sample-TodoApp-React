@@ -1,4 +1,5 @@
 import { ButtonDone } from './ButtonDone';
+import { ButtonDelete } from './ButtonDelete';
 
 export const TodoList = (props) => {
   const { todoList, onClickDone, onClickDelete } = props;
@@ -15,18 +16,10 @@ export const TodoList = (props) => {
                 onClickDone={() => onClickDone(index)}
                 buttonText="完了"
               />
-              <button
-                className="button small done"
-                onClick={() => onClickDone(index)}
-              >
-                完了
-              </button>
-              <button
-                className="button small delete"
-                onClick={() => onClickDelete(index)}
-              >
-                削除
-              </button>
+              <ButtonDelete
+                onClickDelete={() => onClickDelete(index)}
+                buttonText="削除"
+              />
             </li>
           );
         })}

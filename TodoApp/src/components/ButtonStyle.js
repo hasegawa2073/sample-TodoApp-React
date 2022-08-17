@@ -9,21 +9,19 @@ const ButtonBaseStyle = styled.button`
   cursor: pointer;
 `;
 
-const ButtonSmall = styled(ButtonBaseStyle)`
+const ButtonSmallStyle = styled(ButtonBaseStyle)`
   padding: 6px 20px;
 `;
 
-const ButtonDoneStyle = styled(ButtonSmall)`
+export const ButtonDoneStyle = styled(ButtonSmallStyle)`
   margin-right: 8px;
   background-color: #96caf8;
 `;
 
-const ButtonDelete = styled(ButtonSmall)`
+export const ButtonDeleteStyle = styled(ButtonSmallStyle)`
   background-color: #89d92b;
 `;
 
-const ButtonBack = styled(ButtonSmall)`
+const ButtonBack = styled(ButtonSmallStyle)`
   background-color: #b7b7b7;
 `;
-
-export default ButtonDoneStyle;
