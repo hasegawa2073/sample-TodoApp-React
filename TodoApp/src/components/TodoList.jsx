@@ -1,12 +1,13 @@
 import { ButtonDone } from './ButtonDone';
 import { ButtonDelete } from './ButtonDelete';
+import { Title } from './Title';
 
 export const TodoList = (props) => {
   const { todoList, onClickDone, onClickDelete } = props;
 
   return (
     <>
-      <h2 className="title">TODOリスト</h2>
+      <Title title="TODOリスト" />
       <ul>
         {todoList.map((todo, index) => {
           return (

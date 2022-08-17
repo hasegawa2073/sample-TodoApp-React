@@ -1,11 +1,12 @@
 import { ButtonBack } from './ButtonBack';
+import { Title } from './Title';
 
 export const DoneArea = (props) => {
   const { doneList, onClickBack } = props;
 
   return (
     <section className="done-area">
-      <h2 className="title">DONE</h2>
+      <Title title="DONE" />
       <ul>
         {doneList.map((done, index) => {
           return (
