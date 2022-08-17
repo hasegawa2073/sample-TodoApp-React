@@ -13,12 +13,12 @@ li::marker {
   font-size: 1.2rem;
 }
 
-.todo-area {
+/* .todo-area {
   padding: 20px 0px 20px;
   background-color: #c9c9c9;
   border-radius: 10px;
   min-height: 250px;
-}
+} */
 .done-area {
   margin-top: 10px;
   padding: 20px 0px 20px;
@@ -43,13 +43,13 @@ li::marker {
     margin: 0;
     padding-left: 10%;
   }
-  .todo-area {
+  /* .todo-area {
     order: 2;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
     min-height: 0;
-  }
+  } */
   .done-area {
     order: 1;
     flex-grow: 0.3;

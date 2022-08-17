@@ -1,5 +1,20 @@
+import styled from 'styled-components';
 import { InputArea } from './InputArea';
 import { TodoList } from './TodoList';
+
+const ToDoAreaStyle = styled.section`
+  padding: 20px 0px 20px;
+  background-color: #c9c9c9;
+  border-radius: 10px;
+  min-height: 250px;
+  @media (max-width: 500px) {
+    order: 2;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+  }
+`;
 
 export const TodoArea = (props) => {
   const {
@@ -13,7 +28,7 @@ export const TodoArea = (props) => {
   } = props;
 
   return (
-    <section className="todo-area">
+    <ToDoAreaStyle>
       <InputArea
         inputText={inputText}
         onChangeInputText={onChangeInputText}
@@ -25,6 +40,6 @@ export const TodoArea = (props) => {
         onClickDelete={onClickDelete}
         buttonText={buttonText}
       />
-    </section>
+    </ToDoAreaStyle>
   );
 };
