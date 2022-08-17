@@ -30,14 +30,6 @@ li::marker {
 .list {
   margin-top: 12px;
 }
-.todo-text {
-  display: inline-block;
-  margin: 0 16px 0 0;
-  font-family: 'Zen Maru Gothic', sans-serif;
-  font-size: 2rem;
-  color: #707070;
-  font-weight: 700;
-}
 
 @media screen and (max-width: 500px) {
   main {
@@ -63,9 +55,5 @@ li::marker {
     flex-grow: 0.3;
     min-height: 0;
     margin: 0 0 10px;
-  }
-  .todo-text {
-    font-size: 1.8rem;
-    margin-right: 4px;
   }
 }

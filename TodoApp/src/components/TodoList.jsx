@@ -1,6 +1,7 @@
 import { ButtonDone } from './ButtonDone';
 import { ButtonDelete } from './ButtonDelete';
 import { Title } from './Title';
+import { Text } from './Text';
 
 export const TodoList = (props) => {
   const { todoList, onClickDone, onClickDelete } = props;
@@ -12,7 +13,7 @@ export const TodoList = (props) => {
         {todoList.map((todo, index) => {
           return (
             <li key={todo} className="list">
-              <p className="todo-text">{todo}</p>
+              <Text text={todo} />
               <ButtonDone
                 onClickDone={() => onClickDone(index)}
                 buttonText="完了"

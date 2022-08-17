@@ -1,5 +1,6 @@
 import { ButtonBack } from './ButtonBack';
 import { Title } from './Title';
+import { Text } from './Text';
 
 export const DoneArea = (props) => {
   const { doneList, onClickBack } = props;
@@ -11,7 +12,7 @@ export const DoneArea = (props) => {
         {doneList.map((done, index) => {
           return (
             <li key={done} className="list">
-              <p className="todo-text">{done}</p>
+              <Text text={done} />
               <ButtonBack
                 onClickBack={() => onClickBack(index)}
                 buttonText="戻す"
