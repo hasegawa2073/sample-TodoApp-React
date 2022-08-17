@@ -2,6 +2,7 @@ import { ButtonDone } from './ButtonDone';
 import { ButtonDelete } from './ButtonDelete';
 import { Title } from './Title';
 import { Text } from './Text';
+import { UlStyle } from './ListStyle';
 import { ListStyle } from './ListStyle';
 
 export const TodoList = (props) => {
@@ -10,7 +11,7 @@ export const TodoList = (props) => {
   return (
     <>
       <Title title="TODOリスト" />
-      <ul>
+      <UlStyle>
         {todoList.map((todo, index) => {
           return (
             <ListStyle key={todo}>
@@ -26,7 +27,7 @@ export const TodoList = (props) => {
             </ListStyle>
           );
         })}
-      </ul>
+      </UlStyle>
     </>
   );
 };

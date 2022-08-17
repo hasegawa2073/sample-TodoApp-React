@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { ButtonBack } from './ButtonBack';
 import { Title } from './Title';
 import { Text } from './Text';
+import { UlStyle } from './ListStyle';
 import { ListStyle } from './ListStyle';
 
 const DoneAreaStyle = styled.section`
@@ -24,7 +25,7 @@ export const DoneArea = (props) => {
   return (
     <DoneAreaStyle>
       <Title title="DONE" />
-      <ul>
+      <UlStyle>
         {doneList.map((done, index) => {
           return (
             <ListStyle key={done}>
@@ -36,7 +37,7 @@ export const DoneArea = (props) => {
             </ListStyle>
           );
         })}
-      </ul>
+      </UlStyle>
     </DoneAreaStyle>
   );
 };
