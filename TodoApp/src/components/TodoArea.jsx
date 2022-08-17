@@ -9,6 +9,7 @@ export const TodoArea = (props) => {
     todoList,
     onClickDone,
     onClickDelete,
+    buttonText,
   } = props;
 
   return (
@@ -22,6 +23,7 @@ export const TodoArea = (props) => {
         todoList={todoList}
         onClickDone={onClickDone}
         onClickDelete={onClickDelete}
+        buttonText={buttonText}
       />
     </section>
   );

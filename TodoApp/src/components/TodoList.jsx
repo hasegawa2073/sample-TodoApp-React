@@ -1,3 +1,5 @@
+import { ButtonDone } from './ButtonDone';
+
 export const TodoList = (props) => {
   const { todoList, onClickDone, onClickDelete } = props;
 
@@ -9,6 +11,10 @@ export const TodoList = (props) => {
           return (
             <li key={todo} className="list">
               <p className="todo-text">{todo}</p>
+              <ButtonDone
+                onClickDone={() => onClickDone(index)}
+                buttonText="完了"
+              />
               <button
                 className="button small done"
                 onClick={() => onClickDone(index)}

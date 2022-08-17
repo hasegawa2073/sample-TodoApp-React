@@ -27,33 +27,33 @@ li::marker {
   min-height: 200px;
 }
 
-.button {
+/* .button {
   font-family: 'Zen Maru Gothic', sans-serif;
   color: white;
   font-size: 1.6rem;
   border-radius: 10px;
   border: none;
   cursor: pointer;
-}
+} */
 .button.large {
   padding: 8px 24px;
 }
-.button.small {
+/* .button.small {
   padding: 6px 20px;
-}
+} */
 .button.add {
   background-color: #ffb01c;
 }
-.button.done {
+/* .button.done {
   margin-right: 8px;
   background-color: #96caf8;
-}
-.button.delete {
+} */
+/* .button.delete {
   background-color: #89d92b;
-}
-.button.back {
+} */
+/* .button.back {
   background-color: #b7b7b7;
-}
+} */
 
 .title {
   margin: 0;
